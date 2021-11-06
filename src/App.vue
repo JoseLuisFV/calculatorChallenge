@@ -28,7 +28,6 @@ body {
   justify-content: center;
   align-content: center;
   box-sizing: border-box;
-  background-color: hsl(222, 26%, 31%);
   min-height: 100vh;
 }
 </style>

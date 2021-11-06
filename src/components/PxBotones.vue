@@ -1,7 +1,12 @@
 <template>
   <div class="botones">
     <div class="grilla">
-      <px-boton v-for="(boton, i) in botones" :key="i" v-bind:b="boton" />
+      <px-boton
+        v-for="(boton, i) in botones"
+        :key="i"
+        v-bind:b="boton"
+        v-on:catch-value="filterValue"
+      />
     </div>
   </div>
 </template>
@@ -11,9 +16,6 @@ import PxBoton from "./PxBoton";
 export default {
   components: { PxBoton },
   name: "PxBotones",
-  componenets: {
-    PxBoton,
-  },
   data() {
     return {
       botones: [
@@ -38,12 +40,23 @@ export default {
       ],
     };
   },
+  methods: {
+    filterValue(v) {
+      if (typeof v == "number" || v === ".") {
+        this.$emit("send-number", v);
+      } else if (typeof v == "string") {
+        this.$emit("send-operation", v);
+      }
+    },
+  },
 };
 </script>
 
 <style lang="scss">
 .botones {
-  width: 100%;
+  min-width: 320px;
+  width: 90%;
+  max-width: 640px;
 }
 
 .grilla {
@@ -51,11 +64,28 @@ export default {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-auto-rows: 65px;
-  gap: 15px;
+  gap: 25px 20px;
   width: 100%;
   padding: 25px 25px;
-  background-color: hsl(223, 31%, 20%);
   border-radius: 12px;
   font-family: "Sparta", sans-serif;
+}
+
+// colores main
+
+.main .grilla {
+  background-color: hsl(223, 31%, 20%);
+}
+
+// colores light
+
+.light .grilla {
+  background-color: hsl(0, 5%, 81%);
+}
+
+// colores night
+
+.night .grilla {
+  background-color: hsl(268, 71%, 12%);
 }
 </style>

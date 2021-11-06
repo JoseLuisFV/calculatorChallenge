@@ -1,0 +1,34 @@
+{
+  "version": "0.1.0",
+  "name": "calculator",
+  "problems": [
+    "extraneous: bindings@1.5.0 /home/josefvacio/proyects/vuejs/calculator/node_modules/bindings",
+    "extraneous: file-uri-to-path@1.0.0 /home/josefvacio/proyects/vuejs/calculator/node_modules/file-uri-to-path"
+  ],
+  "dependencies": {
+    "bindings": {
+      "version": "1.5.0",
+      "resolved": "https://registry.npmjs.org/bindings/-/bindings-1.5.0.tgz",
+      "extraneous": true,
+      "problems": [
+        "extraneous: bindings@1.5.0 /home/josefvacio/proyects/vuejs/calculator/node_modules/bindings"
+      ]
+    },
+    "core-js": {
+      "version": "3.19.1",
+      "resolved": "https://registry.npmjs.org/core-js/-/core-js-3.19.1.tgz"
+    },
+    "file-uri-to-path": {
+      "version": "1.0.0",
+      "resolved": "https://registry.npmjs.org/file-uri-to-path/-/file-uri-to-path-1.0.0.tgz",
+      "extraneous": true,
+      "problems": [
+        "extraneous: file-uri-to-path@1.0.0 /home/josefvacio/proyects/vuejs/calculator/node_modules/file-uri-to-path"
+      ]
+    },
+    "vue": {
+      "version": "2.6.14",
+      "resolved": "https://registry.npmjs.org/vue/-/vue-2.6.14.tgz"
+    }
+  }
+}
